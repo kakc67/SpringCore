@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+ 
+    <bean id="ao" class="com.spring.core.A">
+    	<property name="a" value="10"></property>
+    	<property name="msg" value="Hello A"></property>
+    </bean>
+    
+    <bean id="bo" class="com.spring.core.B">
+    	<constructor-arg value="20"></constructor-arg>
+    	<constructor-arg value="Hello B"></constructor-arg>
+    </bean>
+    
+    <bean id="hello" class="com.spring.core.Hello">
+    	<property name="aobj" ref="ao"></property>
+    	<constructor-arg ref="bo"></constructor-arg>
+    </bean>
+  
+</beans>

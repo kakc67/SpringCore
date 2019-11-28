@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+ 
+    <bean id="ao" class="com.spring.core.autowire.Aclass">
+    	<property name="msg" value="Hello A"></property>
+    </bean>
+    
+    <bean id="ha1" class="com.spring.core.autowire.Hai">
+    	<property name="msg" value="Hai A"></property>
+    	<property name="no" value="99"></property>
+    </bean>
+    
+    <!-- <bean id="ha2" class="com.spring.core.autowire.Hai">
+    	<property name="msg" value="Hai A"></property>
+    	<property name="no" value="100"></property>
+    </bean> -->
+    
+    <bean id="hello" class="com.spring.core.autowire.Hello" autowire="byName"></bean>
+  
+</beans>
